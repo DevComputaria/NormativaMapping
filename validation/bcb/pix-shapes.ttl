@@ -1,0 +1,12 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix : <http://example.org/pix#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:TransacaoPixShape a sh:NodeShape ;
+    sh:targetClass :TransacaoPix ;
+    sh:property [
+        sh:path :temTempoConclusao ;
+        sh:datatype xsd:duration ;
+        sh:maxInclusive "PT10S"^^xsd:duration ;
+        sh:message "A transação Pix deve ser concluída em até 10 segundos." ;
+    ] .

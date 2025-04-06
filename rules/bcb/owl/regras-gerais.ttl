@@ -1,0 +1,16 @@
+@prefix : <http://example.org/pix#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:TransacaoPix a owl:Class .
+:Instituicao a owl:Class .
+:ServicoLiquidacao a owl:Class .
+
+:temTempoConclusao a owl:DatatypeProperty ;
+    rdfs:domain :TransacaoPix ;
+    rdfs:range xsd:duration .
+
+:garanteDisponibilidade a owl:ObjectProperty ;
+    rdfs:domain :Instituicao ;
+    rdfs:range :ServicoLiquidacao .

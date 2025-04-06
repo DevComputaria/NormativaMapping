@@ -1,0 +1,10 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+:Pix a skos:Concept ;
+    skos:prefLabel "Pix"@pt-br ;
+    skos:definition "Sistema de pagamentos instantâneos no Brasil."@pt-br .
+
+:PixAutomatico a skos:Concept ;
+    skos:prefLabel "Pix Automático"@pt-br ;
+    skos:broader :Pix ;
+    skos:definition "Agendamento automático de pagamentos via Pix."@pt-br .
